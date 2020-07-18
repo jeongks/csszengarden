@@ -1,0 +1,408 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* --------------------------------------
+
+      Background of page
+
+-------------------------------------- */
+body {
+  /* this is the page background */
+  background-color: #f2f3e7;
+  /* this is the body text color */
+  color: #0d2c12;
+  font-family: "Montserrat", sans-serif;
+  margin: 10px 5%;
+  text-align: justify;
+  width: 90%;
+  min-width: 500px; }
+
+/* --------------------------------------
+
+      Header and its animation
+
+-------------------------------------- */
+header {
+  margin: 0;
+  box-sizing: content-box;
+  padding: 0;
+  font-family: "Playfair Display", serif;
+  text-transform: uppercase;
+  min-height: 100px;
+  color: rgba(13, 44, 18, 0.5);
+  background-image: url(background-leaves.png);
+  background-repeat: repeat-x;
+  animation: animate 20s linear infinite; }
+  header h1 {
+    margin: 10px 0 10px 0;
+    font-size: 1.5em;
+    color: #507551; }
+  header h2 {
+    font-size: 1.1em;
+    font-style: italic;
+    color: #7da06e; }
+    header h2 abbr {
+      font-size: 1.1em;
+      font-weight: bold; }
+  @media only screen and (min-width: 1024px) {
+    header {
+      min-height: 120px;
+      max-height: 150px; }
+      header h1 {
+        padding-top: 20px;
+        font-size: 2.5em; }
+      header h2 {
+        font-size: 1.5em; }
+        header h2 abbr {
+          font-size: 1.2em; } }
+
+/* -------------------------------------------------
+
+      Header animation 
+
+-------------------------------------------------- */
+@keyframes animate {
+  0% {
+    background-position: left -4000px top 140px; }
+  15% {
+    background-position: left -3000px top -10px; }
+  30% {
+    background-position: left -2000px top 40px; }
+  45% {
+    background-position: left -1000px top -10px; }
+  60% {
+    background-position: left 0px top -60px; }
+  75% {
+    background-position: left 1000px top -10px; }
+  80% {
+    background-position: left 1200px top 0px; }
+  85% {
+    background-position: left 1400px top 20px; }
+  90% {
+    background-position: left 1600px top 60px; }
+  95% {
+    background-position: left 1800px top 100px; }
+  100% {
+    background-position: left 2000px top 300px; } }
+/* --------------------------------------
+
+      Description followed header
+
+-------------------------------------- */
+.summary {
+  margin-top: 48%;
+  background-color: #c3f7a7; }
+  .summary abbr {
+    font-size: 1.2em; }
+    .summary abbr:hover {
+      transform: scale(1.1); }
+  .summary a {
+    font-size: 1.2em; }
+    .summary a:hover {
+      transform: scale(1.2); }
+  @media only screen and (min-width: 768px) {
+    .summary {
+      margin-top: 36%; } }
+  @media only screen and (min-width: 1024px) {
+    .summary {
+      margin-top: 27%;
+      font-size: 1.1em; } }
+  @media only screen and (min-width: 1600px) {
+    .summary {
+      margin-top: 16%; } }
+  @media only screen and (min-width: 1970px) {
+    .summary {
+      margin-top: 13%; } }
+
+/* ---------------------------------------
+
+      contexts
+
+--------------------------------------- */
+.page-wrapper p {
+  font-size: 1em; }
+  @media only screen and (min-width: 1024px) {
+    .page-wrapper p {
+      font-size: 1.1em; } }
+
+.preamble {
+  margin: 10px 0;
+  background-color: #507551; }
+  .preamble h3 {
+    font-size: 1.5em;
+    margin: 5px 0; }
+
+.main .explanation {
+  margin: 10px 0;
+  background-color: #c3f7a7; }
+  .main .explanation h3 {
+    font-size: 1.5em;
+    margin: 5px 0; }
+.main .participation {
+  margin: 10px 0;
+  background-color: #507551; }
+  .main .participation h3 {
+    font-size: 1.5em;
+    margin: 5px 0; }
+.main .benefits {
+  margin: 10px 0;
+  background-color: #c3f7a7; }
+  .main .benefits h3 {
+    font-size: 1.5em;
+    margin: 5px 0; }
+.main .requirements {
+  margin: 10px 0;
+  background-color: #507551; }
+  .main .requirements h3 {
+    font-size: 1.5em;
+    margin: 5px 0; }
+.main footer {
+  margin: 10px 0;
+  background-color: #c3f7a7;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-family: "Playfair Display", serif;
+  height: 10%;
+  min-height: 44px;
+  margin: 2% 0 2% 0; }
+  .main footer a {
+    margin: auto 0;
+    text-decoration: none;
+    color: #f2f3e7;
+    font-weight: bold;
+    font-size: 1.2em;
+    -webkit-text-stroke: 1px #507551; }
+
+/* ------------------------------------
+
+      list of designs
+
+------------------------------------ */
+.sidebar {
+  /*----------------------------------------
+  
+      Customize Scroll
+  
+  ----------------------------------------*/ }
+  .sidebar .wrapper {
+    background: rgba(13, 44, 18, 0.3);
+    /*------------------
+        control nac
+    ------------------*/
+    /*------------------
+        design lists
+    ------------------*/
+  /*---------------------------------------------
+
+        resources
+
+  --------------------------------------------- */ }
+    .sidebar .wrapper .design-archives {
+      position: absolute;
+      top: 300px;
+      width: 90%;
+      min-width: 500px;
+      background-color: #507551;
+      margin-top: 5px;
+      padding: 10px 0; }
+      .sidebar .wrapper .design-archives h3 {
+        display: none; }
+      .sidebar .wrapper .design-archives nav ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center; }
+        .sidebar .wrapper .design-archives nav ul a {
+          text-decoration: none;
+          color: #c3f7a7;
+          visibility: visible; }
+        .sidebar .wrapper .design-archives nav ul li {
+          position: relative;
+          margin-right: 20px;
+          margin-top: 10px; }
+        .sidebar .wrapper .design-archives nav ul .viewall {
+          font-size: 0.8em; }
+          @media only screen and (min-width: 1024px) {
+            .sidebar .wrapper .design-archives nav ul .viewall {
+              font-size: 1.2em; } }
+          .sidebar .wrapper .design-archives nav ul .viewall:hover {
+            font-weight: bold;
+            transform: scale(1.2); }
+        .sidebar .wrapper .design-archives nav ul .next {
+          display: flex;
+          flex-direction: row; }
+          .sidebar .wrapper .design-archives nav ul .next a {
+            visibility: hidden; }
+          .sidebar .wrapper .design-archives nav ul .next .indicator {
+            color: #7da06e;
+            position: absolute;
+            top: 0;
+            left: 0;
+            visibility: visible;
+            font-weight: bold;
+            font-size: 1em; }
+            .sidebar .wrapper .design-archives nav ul .next .indicator:hover {
+              transform: scale(3); }
+            @media only screen and (min-width: 1024px) {
+              .sidebar .wrapper .design-archives nav ul .next .indicator {
+                font-size: 1.2em; } }
+        .sidebar .wrapper .design-archives nav ul .previous {
+          display: flex;
+          flex-direction: row; }
+          .sidebar .wrapper .design-archives nav ul .previous a {
+            visibility: hidden; }
+          .sidebar .wrapper .design-archives nav ul .previous .indicator {
+            color: #7da06e;
+            position: absolute;
+            top: 0;
+            right: 0;
+            visibility: visible;
+            font-weight: bold;
+            font-size: 1em; }
+            .sidebar .wrapper .design-archives nav ul .previous .indicator:hover {
+              transform: scale(3); }
+            @media only screen and (min-width: 1024px) {
+              .sidebar .wrapper .design-archives nav ul .previous .indicator {
+                font-size: 1.2em; } }
+      @media only screen and (min-width: 500px) {
+        .sidebar .wrapper .design-archives {
+          padding: 2% 0; } }
+      @media only screen and (min-width: 1600px) {
+        .sidebar .wrapper .design-archives {
+          padding: 1% 0; } }
+    .sidebar .wrapper .design-selection {
+      position: absolute;
+      top: 150px;
+      width: 90%;
+      min-width: 500px;
+      background-color: #7da06e; }
+      .sidebar .wrapper .design-selection h3 {
+        font-size: 1.5em;
+        margin: 5px 0; }
+      .sidebar .wrapper .design-selection nav ul {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        justify-content: space-evenly;
+        padding: 10px; }
+        .sidebar .wrapper .design-selection nav ul li {
+          padding: 10px;
+          margin-right: 10px;
+          width: 20%;
+          height: 10%;
+          min-width: 30px;
+          max-height: 80px;
+          overflow: scroll;
+          overflow-wrap: break-word;
+          color: #507551;
+          box-sizing: content-box;
+          font-size: 0.8em;
+          background-color: #0d2c12;
+          border: 1px solid #0d2c12;
+          border-radius: 30% 0 30% 0; }
+          .sidebar .wrapper .design-selection nav ul li a {
+            margin: 0;
+            padding: 10px;
+            color: #c3f7a7;
+            font-size: 1em;
+            font-family: "Playfair Display", serif;
+            font-weight: bold;
+            text-decoration: none; }
+          .sidebar .wrapper .design-selection nav ul li:hover {
+            transform: scale(1.2); }
+      @media only screen and (min-width: 768px) {
+        .sidebar .wrapper .design-selection nav ul li {
+          font-size: 1em; } }
+      @media only screen and (min-width: 1024px) {
+        .sidebar .wrapper .design-selection nav ul li {
+          max-width: 80px;
+          height: 5%;
+          max-height: 80px;
+          text-align: justify;
+          font-size: 1.2em; } }
+    .sidebar .wrapper .zen-resources {
+      background-color: #7da06e; }
+      .sidebar .wrapper .zen-resources h3 {
+        font-size: 1.2em;
+        margin: 5px 0; }
+      .sidebar .wrapper .zen-resources ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px; }
+        .sidebar .wrapper .zen-resources ul li {
+          width: 20%;
+          max-width: 200px;
+          min-width: 44px;
+          font-size: 1.2em;
+          overflow-wrap: break-word;
+          text-align: justify;
+          justify-content: center;
+          margin: 0 5px;
+          border: 1px solid black;
+          border-radius: 20%;
+          padding: 10px;
+          background-color: #6fce72; }
+          .sidebar .wrapper .zen-resources ul li a {
+            color: #c3f7a7;
+            font-family: "Playfair Display", serif; }
+  .sidebar ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px; }
+  .sidebar ::-webkit-scrollbar-thumb {
+    opacity: 0.5;
+    background-color: #507551;
+    border-radius: 100%; }
+  .sidebar ::-webkit-scrollbar-thumb:hover {
+    opacity: 1;
+    background-color: #7da06e; }
+  .sidebar ::-webkit-scrollbar-button {
+    visibility: hidden; }
+  .sidebar ::-webkit-scrollbar-corner {
+    display: none; }

@@ -1,0 +1,470 @@
+@import 'reset';
+@import 'prefix-mixins';
+@import 'layout';
+
+
+//color scheme
+$color-1: #f2f3e7; // Ivory
+$color-2: #0d2c12; // Phthalo green
+$color-3: #507551; // Fren green
+$color-4: #7da06e; // Asparagus
+$color-5: #c3f7a7; // Granny Smith apple
+
+//additional colors
+$success: #6fce72; // green
+$alert: red; // red
+
+// fonts
+$primary-font: 'Playfair Display', serif;
+$secondary-font: 'Montserrat', sans-serif;
+
+/* --------------------------------------
+
+      Background of page
+
+-------------------------------------- */
+
+body {
+  /* this is the page background */
+  background-color: $color-1;
+  /* this is the body text color */
+  color: $color-2;
+  font-family: $secondary-font;
+  margin: 10px 5%;
+  text-align: justify;
+  @include gen-width;
+}
+
+/* --------------------------------------
+
+      Header and its animation
+
+-------------------------------------- */
+header {
+	margin: 0;
+	box-sizing: content-box;
+  padding: 0;
+  font-family: $primary-font;
+	text-transform: uppercase;
+  min-height: 100px;
+  
+	
+	color: rgba(13, 44, 18, 0.5);
+	background-image: url(background-leaves.png);
+	background-repeat: repeat-x;
+	// background-clip: text;
+	// -webkit-background-clip: text;
+  animation: animate 20s linear infinite;
+  h1 {
+    margin: 10px 0 10px 0;
+    font-size: 1.5em;
+    color: $color-3;
+    
+  }
+  h2 { 
+    font-size: 1.1em;
+    font-style: italic;
+    color: $color-4;
+
+    abbr {
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+  }
+
+  @include MQ(M){
+    min-height: 120px;
+    max-height: 150px;
+    h1 {
+      padding-top: 20px;
+      font-size: 2.5em;
+    }
+    h2 {
+      font-size: 1.5em;
+      abbr {
+        font-size: 1.2em;
+      }
+      
+    }
+  }
+}
+/* -------------------------------------------------
+
+      Header animation 
+
+-------------------------------------------------- */
+@keyframes animate {
+	0% {
+	  background-position: left -4000px top 140px;
+  }
+  15% {
+    background-position: left -3000px top -10px;
+  }
+  30% {
+    background-position: left -2000px top 40px;
+  }
+	45% {
+	  background-position: left -1000px top -10px;
+	}
+	60% {
+		background-position: left 0px top -60px;
+	}
+	75% {
+		background-position: left 1000px top -10px;
+  }
+  80% {
+    background-position: left 1200px top 0px; 
+  }
+  85% {
+    background-position: left 1400px top 20px;
+  }
+  90% {
+    background-position: left 1600px top 60px;
+  }
+  95% {
+    background-position: left 1800px top 100px;
+  }
+  100% {
+    background-position: left 2000px top 300px;
+  }
+
+}
+
+/* --------------------------------------
+
+      Description followed header
+
+-------------------------------------- */
+
+.summary {
+  margin-top: 48%;
+  background-color: $color-5; // just to identify. need to fix
+  abbr {
+    font-size: 1.2em;
+    &:hover{
+      transform:scale(1.1);
+    }
+  }
+  a {
+    font-size: 1.2em;
+    &:hover{
+      transform:scale(1.2);
+    }
+  }
+  @include MQ(S){
+    margin-top: 36%;
+  }
+  @include MQ(M){
+    margin-top: 27%;
+    font-size: 1.1em;
+  }
+  @include MQ(L){
+    margin-top: 16%;
+  }
+  @include MQ(XL){
+    margin-top: 13%;
+  }
+}
+
+/* ---------------------------------------
+
+      contexts
+
+--------------------------------------- */
+.page-wrapper {
+  p {
+    font-size: 1em;
+    @include MQ(M){
+      font-size: 1.1em;
+    }
+  }
+}
+.preamble {
+  @include gen-pattern-1; 
+  @include gen-h3;
+}
+
+.main {
+
+  .explanation {
+    @include gen-pattern-2; 
+    @include gen-h3;
+  }
+
+  .participation {
+    @include gen-pattern-1; 
+    @include gen-h3;
+  }
+
+  .benefits {
+    @include gen-pattern-2; 
+    @include gen-h3;
+  }
+
+  .requirements {
+    @include gen-pattern-1; 
+    @include gen-h3;
+  }
+
+  footer {
+    @include gen-pattern-2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: $primary-font;
+    height: 10%;
+    min-height: 44px;
+    margin: 2% 0 2% 0; 
+    a {
+      margin: auto 0;
+      text-decoration: none;
+      color: $color-1;
+      font-weight: bold;
+      font-size: 1.2em;
+      -webkit-text-stroke: 1px $color-3;
+      
+    }
+    
+  }
+}
+
+/* ------------------------------------
+
+      list of designs
+
+------------------------------------ */
+
+.sidebar {
+  // position: absolute;
+  // width: 90%;
+  // top: 100px;
+  // left: 5%;
+  .wrapper {
+    background: rgba(13, 44, 18, 0.3); //color-2 oppacity 0.3
+    /*------------------
+        control nac
+    ------------------*/
+    .design-archives {
+      position: absolute;
+      top: 300px;
+      @include gen-width;
+      background-color: $color-3;
+      h3 {
+        display: none;
+      }
+      margin-top: 5px;
+      padding: 10px 0;
+      nav ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        a {
+          text-decoration: none;
+          color: $color-5;
+          visibility: visible;
+          
+        }
+        li {
+          position: relative;
+          margin-right: 20px;
+          margin-top: 10px;;
+        }
+        .viewall {
+          font-size: 0.8em;
+          @include MQ(M){
+            font-size: 1.2em;
+          }
+          &:hover {
+            font-weight: bold;
+            transform: scale(1.2);
+          }
+        }
+        .next {
+          display: flex;
+          flex-direction: row;
+          a{
+            visibility: hidden;
+          }
+          .indicator {
+            color: $color-4;
+            position: absolute;
+            top: 0;
+            left: 0;
+            visibility: visible;
+            font-weight: bold;
+            font-size: 1em;
+            &:hover {
+              transform: scale(3);
+            }
+            @include MQ(M){
+              font-size: 1.2em;
+            }
+          }
+        }
+        
+        .previous {
+          display: flex;
+          flex-direction: row;
+          a{
+            visibility: hidden;
+          }
+          .indicator {
+            color: $color-4;
+            position: absolute;
+            top: 0;
+            right: 0;
+            visibility: visible;
+            font-weight: bold;
+            font-size: 1em;
+            &:hover {
+              transform: scale(3);
+            }
+            @include MQ(M){
+              font-size: 1.2em;
+            }
+          }
+        }
+      }
+      @include MQ(XS){
+        padding: 2% 0;
+      }
+      @include MQ(L){
+        padding: 1% 0;
+      }
+    }
+    /*------------------
+        design lists
+    ------------------*/
+    .design-selection {
+      position: absolute;
+      top: 150px;
+      @include gen-width;
+      background-color: $color-4; //to identify, fix it later
+      @include gen-h3;
+      nav ul {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        justify-content: space-evenly;
+        padding: 10px;
+        
+        li {
+          padding: 10px;
+          margin-right: 10px;
+          width: 20%;
+          height: 10%;
+          min-width: 30px;
+          max-height: 80px;
+          overflow: scroll;
+          overflow-wrap: break-word;
+          color: $color-3;
+          box-sizing: content-box;
+          font-size: 0.8em;
+          // .designer-name{
+          //   display: none;
+          // }
+          a {
+            margin: 0;
+            padding: 10px;
+            color: $color-5;
+            font-size: 1em;
+            font-family: $primary-font;
+            font-weight: bold;
+            text-decoration: none;
+            
+          }
+          background-color: $color-2;
+          border: 1px solid $color-2; //color need to be change
+          border-radius: 30% 0 30% 0;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+      @include MQ(S) {
+        nav ul li {
+          font-size: 1em;
+        }
+      }
+      @include MQ(M) {
+        nav ul li {
+          max-width: 80px;
+          height: 5%;
+          max-height: 80px;
+          text-align: justify;
+          font-size: 1.2em;
+        }
+        
+        
+      }
+    }
+
+  /*---------------------------------------------
+
+        resources
+
+  --------------------------------------------- */
+
+    .zen-resources {
+      background-color: $color-4;
+      h3 {
+        font-size: 1.2em;
+        margin: 5px 0;
+      }
+      
+      ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+        li {
+          width: 20%;
+          max-width: 200px;
+          min-width: 44px;
+          font-size: 1.2em;
+          overflow-wrap: break-word;
+          text-align: justify;
+          justify-content: center;
+          margin: 0 5px;
+          border: 1px solid black;
+          border-radius: 20%;
+          padding: 10px;
+          background-color: $success;
+          
+          a {
+            color: $color-5;
+            font-family: $primary-font;
+          }
+        }
+      }
+    }
+  }
+
+
+/*----------------------------------------
+
+    Customize Scroll
+
+----------------------------------------*/
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    opacity: 0.5;
+    background-color: $color-3;
+    border-radius: 100%;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    opacity: 1;
+    background-color: $color-4;
+  }
+  ::-webkit-scrollbar-button{
+    visibility: hidden;
+  }
+  ::-webkit-scrollbar-corner {
+    display: none;
+  }
+}
